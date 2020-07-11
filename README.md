@@ -4,6 +4,8 @@
 python main.py --do-download --window 7
 ```
 
+![covid deaths vs time](https://raw.githubusercontent.com/notmatthancock/txcovid/master/example.png)
+
 
 ```bash
 usage: main.py [-h] [--do-download] [--data-url DATA_URL]
