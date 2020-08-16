@@ -32,8 +32,11 @@ def read_excel(path):
     )
     dates = []
     for column in data_frame.columns:
-        month, day = map(int, column.split(' ')[1].split('/'))
-        date = datetime.date(2020, month, day)
+        try:
+            month, day = map(int, column.split(' ')[1].split('/'))
+            date = datetime.date(2020, month, day)
+        except AttributeError:
+            date = column
         dates.append(date)
     deaths = {
         county: row_series.values
